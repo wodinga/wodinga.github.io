@@ -23,7 +23,7 @@ Next, I wrote a function to actually draw this array to a `CIImage`, which is a 
 
 In this ray tracer we called represented the light rays with a struct called `ray` consisting of an **origin** vector and a **direction** vector which is a standard way of representing light.
 
-To represent the vectors, I created a vector **struct**. I overloaded some operators to do vector math. I created this vector **struct** and the vector math functions by following the tutorial, but it turns out that there is a built-in vector type class called `double3` in the `simd` framework, which is a highly optimized vector math framework so I switched to that. Here's what it ended up looking like.
+To represent the vectors, I created a vector **struct**. I overloaded some operators to do vector math. I created this vector **struct** and the vector math functions by following the tutorial, but it turns out that there is a built-in vector type class called `double3` in the `simd` framework, which is a highly optimized vector math framework so I switched to that.
 
 For messing around with ray tracers, the math is often a little easier use spheres because the hit equation works the same given a center. If the sphere is at the origin, the equation is $$x^2 + y^2 + z^2 = R^2$$ or $$(x-cx)^2 + (y-cy)^2 + (z-cz)^2 = R^2$$ when the center is at $$(cx, cy, cz)$$. 
 
@@ -108,5 +108,8 @@ override func draw(_ dirtyRect: NSRect) {
 ```
 Hope you enjoyed my very first real blog post! This was a really interesting project and I was so glad to have finished it because I had a project like this in college that I wasn't able to finish.
 
+You can find the project [here][project].
+
 [swift ray tracer]: http://metalkit.org/2016/03/21/ray-tracing-in-a-swift-playground.html
 [minibook]: https://www.amazon.com/Ray-Tracing-Weekend-Peter-Shirley-ebook/dp/B01B5AODD8
+[project]: http://github.com/wodinga/wodinga.github.io
